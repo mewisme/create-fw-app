@@ -1,7 +1,8 @@
-import js from '@eslint/js'
 import globals from 'globals'
+import js from '@eslint/js'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import simpleImportSort from 'simple-import-sort'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
@@ -25,4 +26,23 @@ export default tseslint.config(
       ],
     },
   },
+  {
+    plugins: {
+      'simple-import-sort': simpleImportSort,
+    },
+    rules: {
+      'simple-import-sort/imports': 'error',
+      'simple-import-sort/exports': 'error',
+      'import/first': 'error',
+      'import/newline-after-import': 'error',
+      'import/no-duplicates': 'error'
+    },
+  },
+  {
+    rules: {
+      indent: ['warn', 2],
+      quotes: ['warn', 'single'],
+      semi: ['warn', 'never']
+    }
+  }
 )

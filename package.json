@@ -1,6 +1,6 @@
 {
   "name": "create-fw-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create fully customizable apps using prebuilt templates across modern frameworks — with one command.",
   "publishConfig": {
     "access": "public"
