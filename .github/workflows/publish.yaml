@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      id-token: write # để publish nếu dùng npm automation token
+      id-token: write
 
     steps:
       - uses: actions/checkout@v4
@@ -26,12 +26,10 @@ jobs:
 
       - run: pnpm install
 
-      # Bump version + commit + tag
       - run: pnpm version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Publish lên NPM
       - run: pnpm release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

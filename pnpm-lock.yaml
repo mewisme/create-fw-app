@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@vercel/ncc':
-        specifier: 0.38.3
-        version: 0.38.3
       typescript:
         specifier: ^5
         version: 5.8.3
@@ -27,6 +24,9 @@ importers:
       '@types/validate-npm-package-name':
         specifier: ^4.0.2
         version: 4.0.2
+      '@vercel/ncc':
+        specifier: 0.38.3
+        version: 0.38.3
       conf:
         specifier: ^13.1.0
         version: 13.1.0
