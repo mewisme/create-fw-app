@@ -1,11 +1,11 @@
-import type { FrameworkTemplate, InstallTemplateArgs, Template } from "./types";
 import { bold, cyan } from "picocolors";
+import type { FrameworkTemplate, InstallTemplateArgs } from "./types";
 
-import { copy } from "./helpers/copy";
 import fs from "fs/promises";
-import { install } from "./helpers/install";
 import os from "os";
 import path from "path";
+import { copy } from "./helpers/copy";
+import { install } from "./helpers/install";
 
 /**
  * Install a Next.js internal template to a given `root` directory.
@@ -36,8 +36,6 @@ export const installTemplate = async ({
         case "gitignore": {
           return `.${name}`;
         }
-        // README.md is ignored by webpack-asset-relocator-loader used by ncc:
-        // https://github.com/vercel/webpack-asset-relocator-loader/blob/e9308683d47ff507253e37c9bcbb99474603192b/src/asset-relocator.js#L227
         case "README-template.md": {
           return "README.md";
         }
@@ -93,7 +91,13 @@ export const templates: FrameworkTemplate = {
       value: "react-vite-shadcn",
     }
   ],
-  vue: []
+  vue: [
+    {
+      title: "Vue.js + Vite + Shadcn/UI",
+      value: "vue-vite-shadcn",
+    }
+  ]
 }
 
 export * from "./types";
+

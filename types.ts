@@ -1,6 +1,6 @@
 import type { PackageManager } from "./helpers/get-pkg-manager";
 
-export type TemplateType = 'next-15-shadcn' | 'react-vite-shadcn'
+export type TemplateType = 'next-15-shadcn' | 'react-vite-shadcn' | 'vue-vite-shadcn'
 
 export interface InstallTemplateArgs {
   appName: string;

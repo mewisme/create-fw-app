@@ -1,16 +1,32 @@
 {
   "name": "create-fw-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create fully customizable apps using prebuilt templates across modern frameworks — with one command.",
+  "author": "Nguyen Mau Minh <support@mewis.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/mewisme/create-fw-app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mewisme/create-fw-app"
+  },
+  "keywords": [
+    "next",
+    "nextjs",
+    "react",
+    "reactjs",
+    "vue",
+    "vuejs",
+    "typescript",
+    "tailwindcss",
+    "shadcn",
+    "shadcn-ui"
+  ],
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/meewmeew/create-fw-app"
+  "engines": {
+    "node": ">=18.18.0"
   },
-  "author": "Nguyen Mau Minh <support@mewis.me>",
-  "license": "MIT",
   "bin": {
     "create-fw-app": "./dist/index.js"
   },
@@ -18,13 +34,16 @@
     "./dist"
   ],
   "scripts": {
-    "dev": "ncc build ./index.ts -w -o dist/",
-    "start": "node dist/index.js",
-    "clean": "rimraf dist",
     "build": "pnpm clean && ncc build ./index.ts -o dist/ --minify --no-cache --no-source-map-register",
-    "version": "changeset version",
+    "clean": "rimraf dist",
+    "dev": "ncc build ./index.ts -w -o dist/",
+    "knip": "knip",
     "release": "pnpm build && changeset publish",
-    "knip": "knip"
+    "start": "node dist/index.js",
+    "version": "changeset version"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   },
   "devDependencies": {
     "@changesets/cli": "2.29.2",
@@ -41,11 +60,5 @@
     "rimraf": "^6.0.1",
     "update-check": "^1.5.4",
     "validate-npm-package-name": "^6.0.0"
-  },
-  "peerDependencies": {
-    "typescript": "^5"
-  },
-  "engines": {
-    "node": ">=18.18.0"
   }
 }
