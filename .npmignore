@@ -2,3 +2,6 @@
 !dist/
 !README.md
 !package.json
+
+templates/**/node_modules
+templates/**/pnpm-lock.yaml
