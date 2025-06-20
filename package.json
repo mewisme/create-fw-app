@@ -1,6 +1,6 @@
 {
   "name": "create-fw-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create fully customizable apps using prebuilt templates across modern frameworks — with one command.",
   "author": "Nguyen Mau Minh <support@mewis.me>",
   "license": "MIT",
@@ -54,11 +54,11 @@
     "conf": "^13.1.0",
     "cross-spawn": "^7.0.6",
     "fast-glob": "^3.3.3",
-    "knip": "^5.47.0",
+    "knip": "^5.61.2",
     "picocolors": "^1.1.1",
     "prompts": "^2.4.2",
     "rimraf": "^6.0.1",
     "update-check": "^1.5.4",
-    "validate-npm-package-name": "^6.0.0"
+    "validate-npm-package-name": "^6.0.1"
   }
 }

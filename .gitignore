@@ -38,3 +38,7 @@ bun.lock
 
 # VSCode
 .vscode
+
+templates/**/node_modules
+templates/**/bun.lock
+templates/**/pnpm-lock.yaml
