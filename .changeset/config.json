@@ -7,5 +7,9 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": []
+  "ignore": [
+    "next-15-shadcn",
+    "react-vite-shadcn",
+    "vue-vite-shadcn"
+  ]
 }
