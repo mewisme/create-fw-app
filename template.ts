@@ -39,9 +39,6 @@ export const installTemplate = async ({
         case "README-template.md": {
           return "README.md";
         }
-        case "package-template.json": {
-          return "package.json";
-        }
         default: {
           return name;
         }

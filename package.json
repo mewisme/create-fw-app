@@ -34,8 +34,6 @@
     "./dist"
   ],
   "scripts": {
-    "preinstall": "node scripts/toggle-template.js false",
-    "postinstall": "node scripts/toggle-template.js true",
     "build": "pnpm clean && ncc build ./index.ts -o dist/ --minify --no-cache --no-source-map-register",
     "clean": "rimraf dist",
     "dev": "ncc build ./index.ts -w -o dist/",
