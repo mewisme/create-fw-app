@@ -1,6 +1,7 @@
 {
+  "private": true,
   "name": "vue-vite-shadcn",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -34,8 +35,5 @@
     "typescript": "~5.7.3",
     "vite": "^6.3.5",
     "vue-tsc": "^2.2.10"
-  },
-  "trustedDependencies": [
-    "@tailwindcss/oxide"
-  ]
+  }
 }

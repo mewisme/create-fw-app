@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "next-15-shadcn",
   "version": "0.1.0",
   "scripts": {
@@ -33,9 +34,5 @@
     "prettier-plugin-tailwindcss": "^0.6.13",
     "tailwindcss": "^4.1.10",
     "typescript": "^5.8.3"
-  },
-  "trustedDependencies": [
-    "@tailwindcss/oxide",
-    "unrs-resolver"
-  ]
+  }
 }
