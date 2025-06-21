@@ -1,11 +1,11 @@
-import { bold, cyan } from "picocolors";
 import type { FrameworkTemplate, InstallTemplateArgs } from "./types";
+import { bold, cyan } from "picocolors";
 
+import { copy } from "./helpers/copy";
 import fs from "fs/promises";
+import { install } from "./helpers/install";
 import os from "os";
 import path from "path";
-import { copy } from "./helpers/copy";
-import { install } from "./helpers/install";
 
 /**
  * Install a Next.js internal template to a given `root` directory.
@@ -38,6 +38,9 @@ export const installTemplate = async ({
         }
         case "README-template.md": {
           return "README.md";
+        }
+        case "package-template.json": {
+          return "package.json";
         }
         default: {
           return name;

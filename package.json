@@ -1,6 +1,6 @@
 {
   "name": "create-fw-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create fully customizable apps using prebuilt templates across modern frameworks — with one command.",
   "author": "Nguyen Mau Minh <support@mewis.me>",
   "license": "MIT",
@@ -34,6 +34,8 @@
     "./dist"
   ],
   "scripts": {
+    "preinstall": "node scripts/toggle-template.js false",
+    "postinstall": "node scripts/toggle-template.js true",
     "build": "pnpm clean && ncc build ./index.ts -o dist/ --minify --no-cache --no-source-map-register",
     "clean": "rimraf dist",
     "dev": "ncc build ./index.ts -w -o dist/",
@@ -46,12 +48,12 @@
     "typescript": "^5"
   },
   "devDependencies": {
-    "@changesets/cli": "2.29.2",
+    "@changesets/cli": "2.29.5",
     "@types/cross-spawn": "^6.0.6",
     "@types/prompts": "^2.4.9",
     "@types/validate-npm-package-name": "^4.0.2",
     "@vercel/ncc": "0.38.3",
-    "conf": "^13.1.0",
+    "conf": "^14.0.0",
     "cross-spawn": "^7.0.6",
     "fast-glob": "^3.3.3",
     "knip": "^5.61.2",
