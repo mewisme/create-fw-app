@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "next-15-shadcn",
+  "name": "@fwa/next-15-shadcn",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev --turbopack",

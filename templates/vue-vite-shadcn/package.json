@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "vue-vite-shadcn",
+  "name": "@fwa/vue-vite-shadcn",
   "version": "0.1.0",
   "type": "module",
   "scripts": {
