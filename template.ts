@@ -1,11 +1,11 @@
-import type { FrameworkTemplate, InstallTemplateArgs } from "./types";
 import { bold, cyan } from "picocolors";
+import type { FrameworkTemplate, InstallTemplateArgs } from "./types";
 
-import { copy } from "./helpers/copy";
 import fs from "fs/promises";
-import { install } from "./helpers/install";
 import os from "os";
 import path from "path";
+import { copy } from "./helpers/copy";
+import { install } from "./helpers/install";
 
 /**
  * Install a Next.js internal template to a given `root` directory.
@@ -33,7 +33,8 @@ export const installTemplate = async ({
     cwd: templatePath,
     rename(name) {
       switch (name) {
-        case "gitignore": {
+        case "gitignore":
+        case "prettierrc": {
           return `.${name}`;
         }
         case "README-template.md": {
