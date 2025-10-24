@@ -42,3 +42,6 @@ bun.lock
 templates/**/node_modules
 templates/**/bun.lock
 templates/**/pnpm-lock.yaml
+
+# Next.js build output
+**/.next

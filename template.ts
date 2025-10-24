@@ -84,6 +84,10 @@ export const templates: FrameworkTemplate = {
     {
       title: "Next.js 15 + Shadcn/UI",
       value: "next-15-shadcn",
+    },
+    {
+      title: "Next.js 16 + Shadcn/UI",
+      value: "next-16-shadcn",
     }
   ],
   react: [

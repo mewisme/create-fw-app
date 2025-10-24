@@ -18,11 +18,11 @@ To get started, use the following command:
 ```bash
 npx create-fw-app@latest
 # or
-yarn create fw-app
+yarn create fw-app@latest
 # or
-pnpm create fw-app
+pnpm create fw-app@latest
 # or
-bun create fw-app
+bun create fw-app@latest
 ```
 
 You'll be prompted to choose:
@@ -38,26 +38,59 @@ Currently supported frameworks and variants include:
 
 | Framework  | Variants                         |
 |------------|----------------------------------|
-| Next.js    | TypeScript, Tailwind CSS, ShadCN/UI |
-| React.js   | TypeScript, Tailwind CSS, ShadCN/UI |
-| Vue.js     | TypeScript, Tailwind CSS, ShadCN/UI |
+| Next.js    | Next.js 15 + ShadCN/UI, Next.js 16 + ShadCN/UI |
+| React.js   | React.js + Vite + ShadCN/UI |
+| Vue.js     | Vue.js + Vite + ShadCN/UI |
+
+### 🎨 Next.js Templates
+
+- **Next.js 15 + ShadCN/UI**: Complete template with 50+ UI components, modern React 19, and latest Next.js features
+- **Next.js 16 + ShadCN/UI**: Latest Next.js 16 with cutting-edge features and comprehensive UI component library
+
+### ⚛️ React Templates
+
+- **React.js + Vite + ShadCN/UI**: Fast development with Vite, TypeScript, and comprehensive UI components
+
+### 🟢 Vue Templates
+
+- **Vue.js + Vite + ShadCN/UI**: Modern Vue 3 with Vite, TypeScript, and beautiful UI components
 
 > More templates are coming soon!
 
 ---
 
+## ✨ Features
+
+- 🚀 **Quick Setup**: Get started in seconds with pre-configured templates
+- 🎨 **Modern UI**: Comprehensive ShadCN/UI component library with 50+ components
+- 📱 **Responsive Design**: Built-in responsive layouts and mobile-first approach
+- 🌙 **Dark Mode**: Automatic dark/light theme switching
+- ⚡ **Performance**: Optimized for speed with latest framework features
+- 🔧 **Developer Experience**: ESLint, Prettier, and TypeScript configured out of the box
+- 📦 **Package Management**: Support for npm, yarn, pnpm, and bun
+
+---
+
 ## 📁 Project Structure
 
-After setup, your project will look like this (example with Next.js + TypeScript):
+After setup, your project will look like this (example with Next.js + ShadCN/UI):
 
 ```
 my-app/
 ├── public/
 ├── src/
 │   ├── app/
+│   │   ├── layout.tsx
+│   │   └── page.tsx
 │   ├── components/
-│   └── styles/
+│   │   └── ui/
+│   │       ├── button.tsx
+│   │       ├── card.tsx
+│   │       ├── dialog.tsx
+│   │       └── ... (50+ components)
+│   └── hooks/
 ├── .gitignore
+├── components.json
 ├── package.json
 ├── tsconfig.json
 └── README.md
