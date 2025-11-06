@@ -33,6 +33,7 @@ export const installTemplate = async ({
     cwd: templatePath,
     rename(name) {
       switch (name) {
+        case "env.example":
         case "gitignore":
         case "prettierrc": {
           return `.${name}`;
@@ -88,6 +89,10 @@ export const templates: FrameworkTemplate = {
     {
       title: "Next.js 16 + Shadcn/UI",
       value: "next-16-shadcn",
+    },
+    {
+      title: "Next.js 16 + NextAuth + Shadcn/UI",
+      value: "next-16-nextauth-shadcn",
     }
   ],
   react: [
